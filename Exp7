@@ -1,0 +1,24 @@
+class Box<T> {
+    T value;
+
+    void set(T value) {
+        this.value = value;
+    }
+
+    T get() {
+        return value;
+    }
+
+    <U> void print(U item) {
+        System.out.println("Generic Method prints: " + item);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Box<Integer> intBox = new Box<>();
+        intBox.set(123);
+        System.out.println("Value: " + intBox.get());
+        intBox.print("Hello Generics");
+    }
+}
